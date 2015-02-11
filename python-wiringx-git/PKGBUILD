@@ -1,0 +1,31 @@
+# Maintainer: Paul Adams <paul@thoughtcriminal.co.uk>
+pkgname=python-wiringx-git
+pkgver=r59.5a352db
+pkgrel=1
+pkgdesc="Python bindings for wiringX"
+arch=()
+url="http://www.wiringx.org"
+license=('GPL')
+groups=()
+depends=('python')
+makedepends=('git')
+provides=()
+conflicts=()
+replaces=()
+backup=()
+options=(!emptydirs)
+install=
+source=(${pkgname}::git+https://github.com/crazystick/wiringX)
+md5sums=('SKIP')
+
+pkgver() {
+  cd "${pkgname}"
+  printf "r%s.%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short HEAD)"
+}
+
+package() {
+	cd "${pkgname}/python"
+	python setup.py install --root="$pkgdir/" --optimize=1
+}
+
+# vim:set ts=2 sw=2 et:
