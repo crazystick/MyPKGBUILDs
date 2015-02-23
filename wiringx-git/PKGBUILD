@@ -1,9 +1,12 @@
-# Maintainer: Paul Adams <paul -at- thoughtcriminal -dot- co.uk>
+# Maintainer: Paul Adams <paul@thoughtcriminal.co.uk>
+
+buildarch=20
+
 pkgname=wiringx-git
-pkgver=r59.5a352db
+pkgver=r66.aad47d9
 pkgrel=1
 pkgdesc="wiringX is a modular GPIO interface, derived from wiringPi"
-arch=('armv7h')
+arch=('arm')
 url="http://wiringx.org"
 license=('GPL')
 groups=()
@@ -15,7 +18,7 @@ replaces=()
 backup=()
 options=()
 install=
-source=(${pkgname}::git+https://github.com/crazystick/wiringX)
+source=(${pkgname}::git+https://github.com/wiringX/wiringX)
 noextract=()
 md5sums=('SKIP')
 

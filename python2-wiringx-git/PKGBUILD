@@ -1,9 +1,12 @@
 # Maintainer: Paul Adams <paul@thoughtcriminal.co.uk>
+
+buildarch=20
+
 pkgname=python2-wiringx-git
-pkgver=r59.5a352db
+pkgver=r68.4492e00
 pkgrel=1
 pkgdesc="Python2 bindings for wiringX"
-arch=()
+arch=('arm')
 url="http://www.wiringx.org"
 license=('GPL')
 groups=()
@@ -15,7 +18,7 @@ replaces=()
 backup=()
 options=(!emptydirs)
 install=
-source=(${pkgname}::git+https://github.com/crazystick/wiringX)
+source=(${pkgname}::git+https://github.com/wiringX/wiringX)
 md5sums=('SKIP')
 
 pkgver() {
